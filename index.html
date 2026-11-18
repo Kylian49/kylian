@@ -1,40 +1,51 @@
 
-</body>
-</html>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Police Chase</title>
+    <title>Moto Rush</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main class="game-shell">
+        <header>
+            <div class="brand">
+                <span class="brand-mark">MR</span>
+                <div>
+                    <p>MOTO</p>
+                    <h1>RUSH</h1>
+                </div>
+            </div>
+            <button id="son" class="sound-button" aria-label="Activer ou couper le son">SON ON</button>
+        </header>
 
-    <h1>🚨 POLICE CHASE 🚨</h1>
+        <section class="hud" aria-label="Informations de course">
+            <div><span>DISTANCE</span><strong><b id="distance">0</b> m</strong></div>
+            <div><span>SCORE</span><strong id="score">0</strong></div>
+            <div><span>VITESSE</span><strong><b id="vitesse">0</b> km/h</strong></div>
+        </section>
 
-    <div id="infos">
-        <span>⭐ Score : <b id="score">0</b></span>
-        <span>❤️ Vies : <b id="vies">3</b></span>
-        <span>🏆 Niveau : <b id="niveau">1</b></span>
-    </div>
+        <div class="game-wrap">
+            <canvas id="jeu" width="400" height="600" aria-label="Jeu de moto"></canvas>
 
-    <div id="menu">
-        <h2>POLICE CHASE</h2>
-        <p>Échappe à la police !</p>
-        <button id="demarrer">JOUER</button>
-    </div>
+            <div id="menu" class="menu">
+                <div class="menu-card">
+                    <p class="eyebrow">NOUVELLE COURSE</p>
+                    <h2>MOTO RUSH</h2>
+                    <p>Esquive les obstacles, récupère les pièces et pars le plus loin possible.</p>
+                    <button id="demarrer" class="primary-button">JOUER</button>
+                </div>
+            </div>
 
-    <canvas id="jeu" width="400" height="600"></canvas>
+            <div class="lives" aria-label="Vies restantes"><span id="life1">◆</span><span id="life2">◆</span><span id="life3">◆</span></div>
+        </div>
 
-    <p id="commandes">
-        ← → Pour conduire ta voiture
-    </p>
-
-    <button id="son">🔊 Son activé</button>
-
+        <div class="controls" aria-label="Commandes tactiles">
+            <button id="gauche" aria-label="Aller à gauche">←</button>
+            <button id="droite" aria-label="Aller à droite">→</button>
+        </div>
+    </main>
     <script src="script.js"></script>
-
 </body>
 </html>
